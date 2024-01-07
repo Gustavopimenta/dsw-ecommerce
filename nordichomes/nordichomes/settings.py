@@ -26,8 +26,11 @@ SECRET_KEY = 'mp0kl0f@lg_@kf#kl(vu4v#+%_5uvzca$cwv5xo8z0^&h*j9j+'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+# Definindo o tempo de validade da sessão em segundos (86400 segundos correspondem a 24 horas).
+SESSION_COOKIE_AGE = 86400
+# Nome da chave usada para armazenar informações relacionadas ao carrinho de compras na sessão do usuário.
+# Este identificador pode ser personalizado conforme necessário para o contexto do aplicativo.
+CART_SESSION_ID = 'cart'
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cart',
     'core',
     'product',
 ]
@@ -64,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },

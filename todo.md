@@ -18,6 +18,6 @@
     - [x] fazer lista de produtos reusaveis
     - [x] mostrar detalhes do produto
 - Part 7
-    - []
-    - []
-    - []
+    - [] criar um app django para o carrinho
+    - [] criar a classe carrinhos (cart)
+    - [] tornar a classe globalmente disponível 
