@@ -12,8 +12,12 @@
 - Parte 5
     - [x] mostrar categorias no sidebar
     - [x] mostrar categoria ativa
-    - [ ] pesquisa de produtos
+    - [x] pesquisa de produtos
 - Parte 6
-    - [ ]
-    - [ ]
-    - [ ]
+    - [x] consertar informacoes dinamicas na lista de produtos
+    - [x] fazer lista de produtos reusaveis
+    - [x] mostrar detalhes do produto
+- Part 7
+    - []
+    - []
+    - []
