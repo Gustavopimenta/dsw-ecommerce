@@ -18,6 +18,11 @@
     - [x] fazer lista de produtos reusaveis
     - [x] mostrar detalhes do produto
 - Part 7
-    - [] criar um app django para o carrinho
-    - [] criar a classe carrinhos (cart)
-    - [] tornar a classe globalmente disponível 
+    - [x] criar um app django para o carrinho
+    - [x] criar a classe carrinhos (cart)
+    - [x] tornar a classe globalmente disponível 
+- Part 8 
+    - [x] Criar view para adicionar o carro 
+    - [x] Incluir htmlx cdn (<script src="https://unpkg.com/htmx..org@1.7.0"></script>)
+    - [x] Criar um menu reusavel em html 
+    - [x] adicionar ao carro 
