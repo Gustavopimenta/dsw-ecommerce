@@ -10,8 +10,8 @@
     - [x] criar html para categoria shop
     - [x] criar html para o produto detalhe página 
 - Parte 5
-    - [ ] mostrar categorias no sidebar
-    - [ ] mostrar categoria ativa
+    - [x] mostrar categorias no sidebar
+    - [x] mostrar categoria ativa
     - [ ] pesquisa de produtos
 - Parte 6
     - [ ]
