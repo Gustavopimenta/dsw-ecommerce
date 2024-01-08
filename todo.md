@@ -31,3 +31,10 @@
     - [x] configurar html para pagina de log in
     - [x] adicionar imagens do produto 
 - Part 10
+    - [x] Tornar possivel se cadastrar
+    - [x] tornar possivel deslogar
+    - [x] tornar possivel logar
+- Part 11
+    - [] criar pagina do carrinho
+    - [] criar html para pagina de checkout
+    

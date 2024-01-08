@@ -31,6 +31,10 @@ SECRET_KEY = 'mp0kl0f@lg_@kf#kl(vu4v#+%_5uvzca$cwv5xo8z0^&h*j9j+'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# Configuração que define a URL para redirecionamento após o logout.
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+
 # Definindo o tempo de validade da sessão em segundos (86400 segundos correspondem a 24 horas).
 SESSION_COOKIE_AGE = 86400
 # Nome da chave usada para armazenar informações relacionadas ao carrinho de compras na sessão do usuário.

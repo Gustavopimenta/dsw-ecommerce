@@ -3,28 +3,48 @@
 {% block content %}
 <div class="max-w-lg mx-auto flex flex-wrap p-6">   
     <div class="w-full bg-gray-100 p-6 rounded-xl">
-     <h1 class="mb-6 text-2xl">sign up</h1>
+     <h1 class="mb-6 text-2xl">Criar conta</h1>
      <!--Alterar sign up por algo em português-->
-        <form method="post" action="." class="space-y-3">
+        <form method="post" action="." class="space-y-3"> 
+        {% csrf_token %} <!--necessario para todos que tiver post atributo-->  
+        
+        <div>
+            <label>Primeiro nome</label>
+            <input type="text" name="first_name" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
+        </div>
+        <div>
+            <label>Ultimo nome</label>
+            <input type="text" name="last_name" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
+        </div>
         <div>
             <label>E-mail</label>
-            <input type="email" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
+            <input type="email" name ="email" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
         </div>
         
         <div>
             <label>Senha</label>
-            <input type="password" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
+            <input type="password" name="password1" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
         </div>
 
         <div>
             <label>Repita a senha</label>
-            <input type="password" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
+            <input type="password" name="password2" class="w-full mt-2 py-4 px-6 bg-white rounded-xl">  
         </div>
+        {% if form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <div class="p-6 bg-red-200 text-red-800 rounded-xl">
+                        <p>{{ error| escape }}</p>
+                    </div>
+                {% endfor %}
+            {% endfor %}
 
-        <div class="p-6 bg-red-200 text-red-800 rounded-xl">
-            <p>Erro! Verifique suas informações</p>
-        </div>
-
+            {% for error in form.non_field_errors %}
+                <div class="p-6 bg-red-200 text-red-800 rounded-xl">
+                    <p>{{ error| escape }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
         <div>
            <button class="py-4 px-6 rounded-xl text-white bg-purple-500 hover:bg-purple-700">Continuar</button>
         </div>
