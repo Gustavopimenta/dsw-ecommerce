@@ -22,7 +22,12 @@
     - [x] criar a classe carrinhos (cart)
     - [x] tornar a classe globalmente disponível 
 - Part 8 
-    - [x] Criar view para adicionar o carro 
+    - [x] Criar view para adicionar o carrinho de compras
     - [x] Incluir htmlx cdn (<script src="https://unpkg.com/htmx..org@1.7.0"></script>)
     - [x] Criar um menu reusavel em html 
-    - [x] adicionar ao carro 
+    - [x] adicionar ao carrinho de compras
+- Part 9
+    - [x] configurar html para pagina de sign up 
+    - [x] configurar html para pagina de log in
+    - [x] adicionar imagens do produto 
+- Part 10

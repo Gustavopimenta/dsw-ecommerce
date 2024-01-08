@@ -11,10 +11,15 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from pathlib import Path #parte do vídeo:8:57 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = Path(__file__).resolve().parent.parent
+# __file__ contém o caminho do arquivo atual
+# Path(__file__) cria um objeto Path com esse caminho
+# .resolve() resolve o caminho absoluto, seguindo links simbólicos se houver
+# .parent retorna o diretório pai do caminho atual
+# this is the folder where we have the manage.py and the root of the folder
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -125,3 +130,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# Configuração para arquivos de mídia no Django
+# Define a URL base para os arquivos de mídia.
+# Isso é usado como prefixo nos caminhos dos arquivos de mídia nas páginas do seu site.
+MEDIA_URL = '/media/'
+# Define o caminho no sistema de arquivos onde os arquivos de mídia serão armazenados.
+# BASE_DIR é uma constante que representa o diretório raiz do seu projeto Django.
+# O caminho completo para os arquivos de mídia será BASE_DIR / 'MEDIA'.
+MEDIA_ROOT = BASE_DIR / 'media/'
+#Essas configurações são fundamentais ao lidar com arquivos de mídia em um projeto Django, 
+# garantindo que os arquivos sejam servidos corretamente quando necessário. 
+
+#parte do vídeo:11:44
