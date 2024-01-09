@@ -43,4 +43,11 @@
     - [x] consertar links no menu
     - [x] separar arquivos urls
     - [x] adicionar título ao navegador
-    
+- Part 12
+    - [] mostrar produtos corretos no carrinho
+    - [] mostrar preço total no carrinho 
+    - [] mostrar preço total no checkout
+    - [] permitir checkout apenas para usuarios autorizados
+    - [] mostrar informações de usuarios no checkout
+    - [] mudar link do checkout no carrinho
+

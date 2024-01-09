@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Configuração que define a URL para redirecionamento após o logout.
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
 
 # Definindo o tempo de validade da sessão em segundos (86400 segundos correspondem a 24 horas).
 SESSION_COOKIE_AGE = 86400

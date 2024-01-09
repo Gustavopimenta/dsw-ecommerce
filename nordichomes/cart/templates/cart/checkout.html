@@ -14,11 +14,11 @@
                 <div class="flex space-x-6 mb-4">
                     <div class="w-1/2">
                         <label class="inline-block mb-2">Primeiro nome</label>
-                        <input type="text" class="w-full p-5 rounded-xl">
+                        <input type="text" class="w-full p-5 rounded-xl" value="{{ request.user.first_name }}">
                     </div>
                     <div class="w-1/2">
                         <label class="inline-block mb-2">Sobrenome</label>
-                        <input type="text" class="w-full p-5 rounded-xl">
+                        <input type="text" class="w-full p-5 rounded-xl" value="{{ request.user.last_name }}">
                     </div>
                 </div>
 
@@ -43,11 +43,12 @@
                 <h2 class="mb-5 uppercase text-lg">Informação de contato</h2>
                 <div class="mb-4">
                     <label class="inline-block mb-2">E-mail</label>
-                    <input type="email" class="w-full p-5 rounded-xl">
+                    <input type="email" class="w-full p-5 rounded-xl" value="{{ request.user.email }}">
                 </div>
+
                 <div class="mb-4">
                     <label class="inline-block mb-2">Telefone</label>
-                    <input type="tel" class="w-full p-5 rounded-xl">
+                    <input type="phone" class="w-full p-5 rounded-xl">
                 </div>
             </div>
 
@@ -61,12 +62,13 @@
     </div>
 
     <div class="summary w-1/4 p-6 bg-gray-100 rounded-xl mt-3">
-        <!-- Conteúdo do sumário ... -->
         <h2 class="uppercase text-lg mb-5">Sumário</h2>
+        <!-- Conteúdo do sumário ... -->
         <div class="mb-6 flex justify-between">
             <span class="font-semibold">Total</span>
-            <span>$99</span>
+            <span>${{ cart.get_total_cost }}</span>
         </div>
+
         <a href="#" class="inline-block px-8 py-4 rounded-xl bg-purple-500 hover:bg-purple-700 text-white">Confirmar</a>
     </div>
 </div>

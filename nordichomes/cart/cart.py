@@ -17,7 +17,12 @@ class Cart(object):
     def __iter__(self):# Itera sobre os itens no carrinho e associa cada produto ao seu objeto Product correspondente.
         for p in self.cart.keys():
             self.cart[str(p)]['product'] = Product.objects.get(pk=p)
-            
+        # Itera sobre os itens no carrinho e calcula o preço total de cada item.
+        for item in self.cart.values():
+            item['total_price'] = int(item['product'].price * item['quantity']) / 100 # Calcula o preço total multiplicando o preço unitário pelo quantidade do produto no carrinho.
+            # Retorna o item, agora atualizado com o preço total, um de cada vez usando 'yield'.
+            yield item 
+               
     def __len__(self):
         # Retorna o número total de itens no carrinho.
         return sum(item['quantity'] for item in self.cart.values())
@@ -49,3 +54,9 @@ class Cart(object):
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
+    
+    def get_total_cost(self):
+        for p in self.cart.keys():
+            self.cart[str(p)]['product'] = Product.objects.get(pk=p)
+
+        return int(sum(item['product'].price * item['quantity'] for item in self.cart.values())) / 100
