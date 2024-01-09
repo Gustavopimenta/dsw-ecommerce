@@ -14,8 +14,7 @@ class Cart(object):
         # Atribui o carrinho à instância.
         self.cart = cart
         
-    def __iter__(self):
-        # Itera sobre os itens no carrinho e associa cada produto ao seu objeto Product correspondente.
+    def __iter__(self):# Itera sobre os itens no carrinho e associa cada produto ao seu objeto Product correspondente.
         for p in self.cart.keys():
             self.cart[str(p)]['product'] = Product.objects.get(pk=p)
             

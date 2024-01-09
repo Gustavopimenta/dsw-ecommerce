@@ -4,30 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https:cdn.tailwindcss.com"></script>
-    <title></title>
+    <title>{% block title %}{% endblock %} | Norte Homes</title>
 </head>
 <body>
     <nav class="border-b border-gray-300">
         <div class="max-w-6xl mx-auto py-2 px-6 xl:px-0 flex  items-center justify-between">
             <div class="menu-left flex items-center space-x-6">
-                <a href="#"class="py-4 text-lg text-purple-500 font-semibold">Norte Homes</a>
+                <a href="{% url 'frontpage' %}"class="py-4 text-lg text-purple-500 font-semibold">Norte Homes</a>
 
             <ul class="flex items-center space-x-4">
                 <li><a href="{% url 'shop' %}">shop</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="">Sobre</a></li>
             
                 {% if request.user.is_authenticated %}
-                <li>
-                    <form action="{% url 'logout' %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="logout-button">Logout</button>
-                    </form>
-                </li>
+                            <li><a href="{% url 'logout' %}">Log out</a></li>
                 {% endif %}
             </ul>
             </div>
+
             <div class="menu-right flex items-center space-x-4">
-                <a href="#">
+                <a href="{% url 'login' %}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                         class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"

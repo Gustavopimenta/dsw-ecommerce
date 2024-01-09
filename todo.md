@@ -35,6 +35,12 @@
     - [x] tornar possivel deslogar
     - [x] tornar possivel logar
 - Part 11
-    - [] criar pagina do carrinho
-    - [] criar html para pagina de checkout
+    - [x] criar pagina do carrinho
+    - [x] criar html para pagina de checkout
+- Part 12
+    - [] adicionar para o carrinho da lista
+    - [] checar se imagem existe primeiro (detalhe produto)
+    - [x] consertar links no menu
+    - [x] separar arquivos urls
+    - [x] adicionar título ao navegador
     
